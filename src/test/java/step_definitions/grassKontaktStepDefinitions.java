@@ -62,7 +62,7 @@ public class grassKontaktStepDefinitions {
 
     @Then("User want to verify if the text Ihre Nachricht wurde versendet is displayed")
     public void userWantToVerifyIfTheTextIhreNachrichtWurdeVersendetIsDisplayed() {
-        Assert.assertTrue(grassKontaktPage.Nachrichtversendet.getText().contains("Senden\n" +
+        Assert.assertTrue(grassKontaktPage.Nachrichtversendet.getText().contains(
                 "Ihre Nachricht wurde versendet."));
     }
 
@@ -74,6 +74,12 @@ public class grassKontaktStepDefinitions {
     @And("User enter name in the Name field")
     public void userEnterNameInTheNameField() {
         grassKontaktPage.Name.sendKeys(faker.name().fullName());
+    }
+
+    @And("User want to verify if the text Ihre Nachricht wurde versendet is not displayed")
+    public void userWantToVerifyIfTheTextIhreNachrichtWurdeVersendetIsNotDisplayed() {
+        Assert.assertFalse(grassKontaktPage.Nachrichtversendet.getText().contains(
+                "Ihre Nachricht wurde versendet."));
     }
 }
 

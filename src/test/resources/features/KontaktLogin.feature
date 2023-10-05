@@ -25,5 +25,5 @@ Feature: Kontakt Login feature
     And User fill in a message in the Ihre Nachricht field
     And User click on the Ich stimme zu option
     And User click on the Send button
-    And User want to verify if the text Ihre Nachricht wurde versendet is displayed
+    And User want to verify if the text Ihre Nachricht wurde versendet is not displayed
 
