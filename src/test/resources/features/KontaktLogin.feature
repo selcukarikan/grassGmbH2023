@@ -17,6 +17,7 @@ Feature: Kontakt Login feature
     And User click on the Send button
     Then User want to verify if the text Ihre Nachricht wurde versendet is displayed
 
+
   Scenario: TC200 GrassKontakPage Negative Test
 
     And User enter name in the Name field
